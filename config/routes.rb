@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  
   get 'sessions/new'
 
 
@@ -16,10 +17,15 @@ Rails.application.routes.draw do
 
   get 'users/edit'
 
+  get 'events/index', as: 'event'
 
+  get 'events/show', as: 'show'
+
+  get 'events/new', as: 'new'
 
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
   resources :users
+  resources :events
 end
