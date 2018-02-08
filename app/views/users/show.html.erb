@@ -1,0 +1,14 @@
+<% if @user == current_user %>
+
+<h2>Connecté avec l'adresse <%= @user.email %></h2>
+
+
+<p></p>
+<h3><p> <%= link_to('Editer le profil', edit_user_path) %> </p> </h3>
+ 
+<% else %>
+
+<h2>Bien essayé petit hacker malin! </h2>
+
+<% end %>
+
