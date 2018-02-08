@@ -23,6 +23,9 @@ Rails.application.routes.draw do
 
   get 'events/new', as: 'new'
 
+get "events/suscribe/:id", to: "events#suscribe"
+  get "events/:id/:id", to: "events#adduser"
+
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
